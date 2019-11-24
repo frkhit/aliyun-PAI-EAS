@@ -48,6 +48,10 @@ def build_sign_str(uri=None, method=None, headers=None, body=None):
     string_to_sign.append(_format_header(headers=headers))
     string_to_sign.append(_build_resource(uri=uri, body=body))
 
+    for _index, _value in enumerate(string_to_sign):
+        if not isinstance(_value, str):
+            string_to_sign[_index] = _value.decode("utf-8")
+
     return ''.join(string_to_sign)
 
 def _build_resource(uri="", body={}):

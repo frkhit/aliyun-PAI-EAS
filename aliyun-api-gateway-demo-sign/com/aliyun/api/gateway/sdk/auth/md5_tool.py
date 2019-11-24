@@ -25,13 +25,15 @@ Created on 9/28/2015
 @author: alex
 """
 
-import hashlib
 import base64
+import hashlib
 
 
 def _get_md5(content):
-    m = hashlib.md5()
-    m.update(buffer(content))
+    if isinstance(content, str):
+        m = hashlib.md5(content.encode("utf-8"))
+    else:
+        m = hashlib.md5(content)
     return m.digest()
 
 
