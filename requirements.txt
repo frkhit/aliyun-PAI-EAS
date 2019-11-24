@@ -1,0 +1,2 @@
+tensorflow==1.14.0
+http://eas-data.oss-cn-shanghai.aliyuncs.com/sdk/pai_tf_predict_proto-1.0-py2.py3-none-any.whl

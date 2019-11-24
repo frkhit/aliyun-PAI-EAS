@@ -98,3 +98,12 @@ nohup.out
 
 # pycharm
 .idea/
+.vscode/
+
+# model
+*.zip
+demo_simple/
+demo_complex/
+models_meta/
+
+
